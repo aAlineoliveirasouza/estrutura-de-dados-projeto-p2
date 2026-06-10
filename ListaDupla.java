@@ -85,6 +85,7 @@ public class ListaDupla {
         NoDuplo atual = pri;
         int tamanho = 0;
         while (atual != null) {
+            tamanho++;
             atual = atual.getProximo();
         }
         return tamanho;
