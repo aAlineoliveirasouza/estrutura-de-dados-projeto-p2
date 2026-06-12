@@ -12,8 +12,8 @@ public class Fila<T> {
         ult = n;
     }
 
-    public T desenfileira() throws FilaVaziaException {
-        if (pri == null)
+    public T desenfileira() {
+        if (filaVazia())
             throw new FilaVaziaException("Fila vazia");
         T v = pri.getInfo();
         pri = pri.getProximo();
@@ -54,7 +54,7 @@ public class Fila<T> {
     }
 }
 
-class FilaVaziaException extends Exception {
+class FilaVaziaException extends RuntimeException {
     public FilaVaziaException(String msg) {
         super(msg);
     }
