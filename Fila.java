@@ -4,7 +4,11 @@ public class Fila<T> {
 
     public void enfileira(T info) {
         No<T> n = new No<>(info);
-        ult.setProximo(n);
+        if (ult == null)
+            pri = n;
+        else {
+            ult.setProximo(n);
+        }
         ult = n;
     }
 
